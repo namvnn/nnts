@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "composite": true,
+        "emitDeclarationOnly": true,
+        "erasableSyntaxOnly": true,
+        "esModuleInterop": true,
+        "lib": ["ES2022"],
+        "module": "ESNext",
+        "moduleDetection": "force",
+        "moduleResolution": "bundler",
+        "noEmitOnError": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitOverride": true,
+        "noImplicitReturns": true,
+        "noUncheckedSideEffectImports": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "outDir": "${configDir}/dist",
+        "skipLibCheck": true,
+        "strict": true,
+        "target": "ES2022",
+        "types": [],
+        "verbatimModuleSyntax": true
+    },
+    "references": []
+}

@@ -14,7 +14,13 @@
         "fmt:check": "oxfmt --check",
         "lint": "oxlint",
         "lint:fix": "oxlint --fix",
-        "prepare": "husky"
+        "prepare": "husky",
+        "test": "vitest",
+        "test:coverage": "vitest run --coverage",
+        "test:ui": "vitest --ui",
+        "typecheck": "tsc --build",
+        "typecheck:clean": "tsc --build --clean",
+        "typecheck:watch": "tsc --build --watch"
     },
     "devDependencies": {
         "@arethetypeswrong/core": "0.18.3",

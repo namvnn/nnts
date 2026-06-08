@@ -1,0 +1,12 @@
+{
+    "extends": "./tsconfig.base.json",
+    "compilerOptions": {
+        "tsBuildInfoFile": "${configDir}/dist/tsconfig.tsbuildinfo"
+    },
+    "files": [],
+    "include": [],
+    "references": [
+        { "path": "./packages/example" },
+        { "path": "./tsconfig.config-files.json" }
+    ]
+}

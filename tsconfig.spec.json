@@ -1,0 +1,12 @@
+{
+    "extends": "./tsconfig.base.json",
+    "compilerOptions": {
+        "types": ["vitest/globals"]
+    },
+    "include": [
+        "${configDir}/**/*.test.ts",
+        "${configDir}/**/*.test.tsx",
+        "${configDir}/**/*.test-d.ts",
+        "${configDir}/package.json"
+    ]
+}

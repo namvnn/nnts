@@ -1,0 +1,19 @@
+{
+    "extends": "./tsconfig.base.json",
+    "compilerOptions": {
+        "isolatedDeclarations": true,
+        "rootDir": "${configDir}/src",
+        "tsBuildInfoFile": "${configDir}/dist/tsconfig.build.tsbuildinfo"
+    },
+    "include": [
+        "${configDir}/src/**/*.ts",
+        "${configDir}/src/**/*.tsx",
+        "${configDir}/*.d.ts",
+        "${configDir}/package.json"
+    ],
+    "exclude": [
+        "${configDir}/src/**/*.test.ts",
+        "${configDir}/src/**/*.test.tsx",
+        "${configDir}/src/**/*.test-d.ts"
+    ]
+}
