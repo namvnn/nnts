@@ -1,0 +1,4 @@
+{
+    "*.{ts,tsx}": "pnpm lint",
+    "*.{ts,tsx,js,json,jsonc,md,yaml}": "pnpm fmt"
+}
