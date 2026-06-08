@@ -1,0 +1,37 @@
+# Dependency directories
+node_modules/
+
+# Logs
+logs
+*.logs
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Wrangler
+.wrangler/
+.dev.vars
+
+# JUnit
+junit.xml
+junit.*.xml
+
+# Coverage
+coverage/
+*.lcov
+
+# Environment variable files
+.env.*.local
+.env.local
+
+# Build output
+dist/
+
+# macOS
+.DS_Store
+
+# Temporary script files
+.temp*
