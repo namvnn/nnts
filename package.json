@@ -10,6 +10,7 @@
     },
     "type": "module",
     "scripts": {
+        "build": "tsdown",
         "fmt": "oxfmt",
         "fmt:check": "oxfmt --check",
         "lint": "oxlint",
