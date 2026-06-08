@@ -2,7 +2,7 @@
     "name": "@nnts/monorepo",
     "version": "0.0.1-beta",
     "private": true,
-    "description": "TypeScript libraries with zero dependencies.",
+    "description": "TypeScript libraries and developer tools.",
     "license": "MIT",
     "repository": {
         "type": "git",

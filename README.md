@@ -1,6 +1,9 @@
 # `nnts` ![Static Badge](https://img.shields.io/badge/IN_PROGRESS-yellow?style=flat-square)
 
-TypeScript libraries with ZERO dependencies.
+A collection of TypeScript libraries and developer tools.
+
+> This project is currently under active development and is not yet considered
+> stable.
 
 ## License
 
