@@ -95,10 +95,7 @@ export default defineConfig({
         'typescript/return-await': 'error',
         'typescript/unified-signatures': 'error',
         'unicorn/filename-case': 'error',
-        'vitest/consistent-test-it': [
-            'error',
-            { fn: 'test', withinDescribe: 'test' },
-        ],
+        'vitest/consistent-test-it': 'error',
         'vitest/consistent-vitest-vi': 'error',
     },
 });
