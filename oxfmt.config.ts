@@ -24,5 +24,5 @@ export default defineConfig({
             'unknown',
         ],
     },
-    ignorePatterns: ['LICENSE.md', 'pnpm-lock.yaml', 'pnpm-workspace.yaml'],
+    ignorePatterns: ['LICENSE.md', 'pnpm-lock.yaml'],
 });
