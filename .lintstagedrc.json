@@ -1,4 +1,5 @@
 {
     "*.{ts,tsx}": "pnpm lint",
-    "*.{ts,tsx,js,json,jsonc,md,yaml}": "pnpm fmt"
+    "*.{ts,tsx,js,json,jsonc,md}": "pnpm fmt",
+    "!(pnpm-lock).yaml": "pnpm fmt"
 }

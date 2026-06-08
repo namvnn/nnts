@@ -17,6 +17,7 @@
         "prepare": "husky"
     },
     "devDependencies": {
+        "@arethetypeswrong/core": "0.18.3",
         "@vitest/coverage-v8": "4.1.8",
         "@vitest/ui": "4.1.8",
         "husky": "9.1.7",
@@ -24,6 +25,8 @@
         "oxfmt": "0.53.0",
         "oxlint": "1.68.0",
         "oxlint-tsgolint": "0.23.0",
+        "publint": "0.3.21",
+        "tsdown": "0.22.2",
         "typescript": "6.0.3",
         "vitest": "4.1.8"
     },
