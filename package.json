@@ -1,15 +1,25 @@
 {
-  "name": "@nnts/monorepo",
-  "type": "module",
-  "version": "0.0.1-beta",
-  "private": true,
-  "packageManager": "pnpm@11.5.2",
-  "description": "TypeScript libraries with zero dependencies.",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/namvnn/nnts.git"
-  },
-  "scripts": {},
-  "devDependencies": {}
+    "name": "@nnts/monorepo",
+    "version": "0.0.1-beta",
+    "private": true,
+    "description": "TypeScript libraries with zero dependencies.",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/namvnn/nnts.git"
+    },
+    "type": "module",
+    "scripts": {
+        "fmt": "oxfmt",
+        "fmt:check": "oxfmt --check",
+        "lint": "oxlint",
+        "lint:fix": "oxlint --fix"
+    },
+    "devDependencies": {
+        "oxfmt": "0.53.0",
+        "oxlint": "1.68.0",
+        "oxlint-tsgolint": "0.23.0",
+        "typescript": "6.0.3"
+    },
+    "packageManager": "pnpm@11.5.2"
 }

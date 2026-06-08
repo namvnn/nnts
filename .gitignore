@@ -1,6 +1,9 @@
 # Dependency directories
 node_modules/
 
+# Build output
+dist/
+
 # Logs
 logs
 *.logs
@@ -26,9 +29,6 @@ coverage/
 # Environment variable files
 .env.*.local
 .env.local
-
-# Build output
-dist/
 
 # macOS
 .DS_Store
