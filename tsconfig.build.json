@@ -14,6 +14,7 @@
     "exclude": [
         "${configDir}/src/**/*.test.ts",
         "${configDir}/src/**/*.test.tsx",
-        "${configDir}/src/**/*.test-d.ts"
+        "${configDir}/src/**/*.test-d.ts",
+        "${configDir}/src/**/*.test-d.tsx"
     ]
 }

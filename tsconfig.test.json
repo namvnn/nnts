@@ -7,6 +7,8 @@
         "${configDir}/**/*.test.ts",
         "${configDir}/**/*.test.tsx",
         "${configDir}/**/*.test-d.ts",
+        "${configDir}/**/*.test-d.tsx",
         "${configDir}/package.json"
-    ]
+    ],
+    "exclude": ["${configDir}/**/dist/**", "${configDir}/**/node_modules/**"]
 }

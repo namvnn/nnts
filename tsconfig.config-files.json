@@ -4,10 +4,11 @@
         "types": ["node"]
     },
     "include": [
-        "oxfmt.config.ts",
-        "oxlint.config.ts",
-        "./**/tsdown.config.ts",
-        "./**/vite.config.ts",
-        "./**/vitest.config.ts"
-    ]
+        "**/oxfmt.config.ts",
+        "**/oxlint.config.ts",
+        "**/tsdown.config.ts",
+        "**/vite.config.ts",
+        "**/vitest.config.ts"
+    ],
+    "exclude": ["**/dist/**", "**/node_modules/**"]
 }
