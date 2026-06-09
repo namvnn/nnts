@@ -7,5 +7,7 @@ export default defineConfig({
     format: ['cjs', 'esm'],
     publint: true,
     tsconfig: 'tsconfig.build.json',
-    workspace: true,
+    workspace: {
+        include: ['packages/*'],
+    },
 });
