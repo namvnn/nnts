@@ -10,7 +10,10 @@
     },
     "type": "module",
     "scripts": {
-        "build": "tsdown",
+        "build": "tsdown --minify",
+        "build:pkg": "tsdown --minify --filter",
+        "dev": "tsdown --watch",
+        "dev:pkg": "tsdown --watch --filter",
         "fmt": "oxfmt",
         "fmt:check": "oxfmt --check",
         "lint": "oxlint",
