@@ -8,10 +8,12 @@ export default defineConfig({
             include: ['packages/**/*.{ts,tsx}'],
             exclude: [
                 '**/*.d.ts',
-                '**/*.test.{ts,tsx}',
+                '**/*.{test,test-d}.{ts,tsx}',
+                '**/dist/**',
+                '**/node_modules/**',
                 'tsdown.config.ts',
-                'vitest.config.ts',
                 'vite.config.ts',
+                'vitest.config.ts',
             ],
             thresholds: {
                 'packages/**/*.{ts,tsx}': {
