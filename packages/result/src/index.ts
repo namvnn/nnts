@@ -188,13 +188,13 @@ export const match = <V, E, R1, R2>(
  * Executes a synchronous function and captures thrown errors into a {@link Result}.
  *
  * @typeParam V - The return type of the function.
- * @typeParam E - The error type. Defaults to {@link Error}.
+ * @typeParam E - The error type.
  *
  * @param fn - The function to execute.
  * @returns An {@link Ok} containing the return value, or an {@link Err}
  * containing the thrown error.
  */
-export const tryCatch = <V, E = Error>(fn: () => V): Result<V, E> => {
+export const tryCatch = <V, E>(fn: () => V): Result<V, E> => {
     try {
         const value = fn();
         return ok(value);
@@ -208,13 +208,13 @@ export const tryCatch = <V, E = Error>(fn: () => V): Result<V, E> => {
  * or thrown errors into a {@link Result}.
  *
  * @typeParam V - The resolved value type.
- * @typeParam E - The error type. Defaults to {@link Error}.
+ * @typeParam E - The error type.
  *
  * @param fn - The async function to execute.
  * @returns A promise resolving to an {@link Ok} containing the resolved value,
  * or an {@link Err} containing the rejection reason.
  */
-export const tryCatchAsync = async <V, E = Error>(
+export const tryCatchAsync = async <V, E>(
     fn: () => Promise<V>,
 ): Promise<Result<V, E>> => {
     try {
