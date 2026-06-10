@@ -58,6 +58,7 @@ export default defineConfig({
         'typescript/consistent-type-exports': 'error',
         'typescript/consistent-type-imports': 'error',
         'typescript/dot-notation': 'error',
+        'typescript/explicit-function-return-type': 'error',
         'typescript/explicit-member-accessibility': 'error',
         'typescript/no-confusing-void-expression': 'error',
         'typescript/no-explicit-any': ['error', { ignoreRestArgs: true }],
