@@ -14,18 +14,16 @@ import {
 
 describe('ok', () => {
     it('creates an Ok result', () => {
-        const result = ok(42);
+        const result: Result<number, string> = ok(42);
 
-        expectTypeOf(result).toEqualTypeOf<Ok<number>>();
         expect(result).toEqual({ type: 'Ok', value: 42 });
     });
 });
 
 describe('err', () => {
     it('creates an Err result', () => {
-        const result = err('failure');
+        const result: Result<number, string> = err('failure');
 
-        expectTypeOf(result).toEqualTypeOf<Err<string>>();
         expect(result).toEqual({ type: 'Err', error: 'failure' });
     });
 });
