@@ -11,9 +11,9 @@ export default defineConfig({
                 '**/*.{test,test-d}.{ts,tsx}',
                 '**/dist/**',
                 '**/node_modules/**',
-                'tsdown.config.ts',
-                'vite.config.ts',
-                'vitest.config.ts',
+                '**/tsdown.config.ts',
+                '**/vite.config.ts',
+                '**/vitest.config.ts',
             ],
             thresholds: {
                 'packages/**/*.{ts,tsx}': {
