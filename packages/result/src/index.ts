@@ -4,7 +4,7 @@
  * @typeParam V - The type of the success value.
  */
 export type Ok<V> = {
-    type: 'Ok';
+    type: "Ok";
     value: V;
 };
 /**
@@ -13,7 +13,7 @@ export type Ok<V> = {
  * @typeParam E - The type of the error value.
  */
 export type Err<E> = {
-    type: 'Err';
+    type: "Err";
     error: E;
 };
 
@@ -63,7 +63,7 @@ export class PanicResultError extends Error {
      */
     public constructor(message: string, options?: ErrorOptions) {
         super(message, options);
-        this.name = 'PanicResultError';
+        this.name = "PanicResultError";
     }
 }
 
@@ -76,7 +76,7 @@ export class PanicResultError extends Error {
  * @returns An {@link Ok} result.
  */
 export const ok = <V>(value: V): Ok<V> => {
-    return { type: 'Ok', value };
+    return { type: "Ok", value };
 };
 
 /**
@@ -88,7 +88,7 @@ export const ok = <V>(value: V): Ok<V> => {
  * @returns An {@link Err} result.
  */
 export const err = <E>(error: E): Err<E> => {
-    return { type: 'Err', error };
+    return { type: "Err", error };
 };
 
 /**
@@ -101,7 +101,7 @@ export const err = <E>(error: E): Err<E> => {
  * @returns `true` if the result is {@link Ok}.
  */
 export const isOk = <V, E>(result: Result<V, E>): result is Ok<V> => {
-    return result.type === 'Ok';
+    return result.type === "Ok";
 };
 
 /**
@@ -114,7 +114,7 @@ export const isOk = <V, E>(result: Result<V, E>): result is Ok<V> => {
  * @returns `true` if the result is {@link Err}.
  */
 export const isErr = <V, E>(result: Result<V, E>): result is Err<E> => {
-    return result.type === 'Err';
+    return result.type === "Err";
 };
 
 /**
@@ -179,9 +179,7 @@ export const match = <V, E, R1, R2>(
     result: Result<V, E>,
     matchers: Matchers<V, E, R1, R2>,
 ): R1 | R2 => {
-    return isOk(result)
-        ? matchers.ok(result.value)
-        : matchers.err(result.error);
+    return isOk(result) ? matchers.ok(result.value) : matchers.err(result.error);
 };
 
 /**
@@ -214,9 +212,7 @@ export const tryCatch = <V, E>(fn: () => V): Result<V, E> => {
  * @returns A promise resolving to an {@link Ok} containing the resolved value,
  * or an {@link Err} containing the rejection reason.
  */
-export const tryCatchAsync = async <V, E>(
-    fn: () => Promise<V>,
-): Promise<Result<V, E>> => {
+export const tryCatchAsync = async <V, E>(fn: () => Promise<V>): Promise<Result<V, E>> => {
     try {
         const value = await fn();
         return ok(value);

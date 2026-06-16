@@ -14,24 +14,24 @@ This enables explicit, type-safe error handling without exceptions.
 ### Creating and checking `Result`
 
 ```ts
-import { ok, err, isOk, isErr, Result } from '@nnts/result';
+import { ok, err, isOk, isErr, Result } from "@nnts/result";
 
 const success: Result<number, string> = ok(42);
-const failure: Result<number, string> = err('Something went wrong');
+const failure: Result<number, string> = err("Something went wrong");
 
 if (isOk(success)) {
-    console.log('Success value:', success.value);
+    console.log("Success value:", success.value);
 }
 
 if (isErr(failure)) {
-    console.log('Error value:', failure.error);
+    console.log("Error value:", failure.error);
 }
 ```
 
 ### Pattern Matching
 
 ```ts
-import { match } from '@nnts/result';
+import { match } from "@nnts/result";
 
 const result = ok(42);
 
@@ -50,13 +50,13 @@ console.log(message);
 when called on the `Err` variant.
 
 ```ts
-import { ok, err, unwrap, unwrapErr, PanicResultError } from '@nnts/result';
+import { ok, err, unwrap, unwrapErr, PanicResultError } from "@nnts/result";
 
 try {
     const value = unwrap(ok(42));
     console.log(value); // 42
 
-    const error = unwrapErr(err('Something went wrong'));
+    const error = unwrapErr(err("Something went wrong"));
     console.log(error); // Something went wrong
 } catch (error) {
     if (error instanceof PanicResultError) {
@@ -70,16 +70,16 @@ try {
 Wrap synchronous operations that may throw.
 
 ```ts
-import { tryCatch, match } from '@nnts/result';
+import { tryCatch, match } from "@nnts/result";
 
 const result = tryCatch(() => JSON.parse('{"name":"Alice"}'));
 
 match(result, {
     ok: (value) => {
-        console.log('Parsed:', value);
+        console.log("Parsed:", value);
     },
     err: (error) => {
-        console.error('Parse failed:', error);
+        console.error("Parse failed:", error);
     },
 });
 ```
@@ -89,19 +89,19 @@ match(result, {
 Wrap asynchronous operations that may reject or throw.
 
 ```ts
-import { tryCatchAsync, match } from '@nnts/result';
+import { tryCatchAsync, match } from "@nnts/result";
 
 const result = await tryCatchAsync(async () => {
-    const response = await fetch('https://api.example.com/users');
+    const response = await fetch("https://api.example.com/users");
     return response.json();
 });
 
 match(result, {
     ok: (data) => {
-        console.log('Fetched data:', data);
+        console.log("Fetched data:", data);
     },
     err: (error) => {
-        console.error('Request failed:', error);
+        console.error("Request failed:", error);
     },
 });
 ```

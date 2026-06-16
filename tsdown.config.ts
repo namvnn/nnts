@@ -1,4 +1,4 @@
-import { defineConfig } from 'tsdown';
+import { defineConfig } from "tsdown";
 
 export default defineConfig({
     attw: true,
@@ -8,10 +8,10 @@ export default defineConfig({
     exports: {
         devExports: true,
     },
-    format: ['cjs', 'esm'],
+    format: ["cjs", "esm"],
     publint: true,
-    tsconfig: 'tsconfig.build.json',
+    tsconfig: "tsconfig.build.json",
     workspace: {
-        include: ['packages/*'],
+        include: ["packages/*"],
     },
 });

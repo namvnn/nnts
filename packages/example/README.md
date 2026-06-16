@@ -5,9 +5,9 @@ An example of nnts package.
 ## Usage
 
 ```ts
-import { hello } from '@nnts/example';
+import { hello } from "@nnts/example";
 
-console.log(hello('World'));
+console.log(hello("World"));
 // Hello World!
 ```
 
