@@ -179,7 +179,9 @@ export const match = <V, E, R1, R2>(
     result: Result<V, E>,
     matchers: Matchers<V, E, R1, R2>,
 ): R1 | R2 => {
-    return isOk(result) ? matchers.ok(result.value) : matchers.err(result.error);
+    return isOk(result)
+        ? matchers.ok(result.value)
+        : matchers.err(result.error);
 };
 
 /**
@@ -212,7 +214,9 @@ export const tryCatch = <V, E>(fn: () => V): Result<V, E> => {
  * @returns A promise resolving to an {@link Ok} containing the resolved value,
  * or an {@link Err} containing the rejection reason.
  */
-export const tryCatchAsync = async <V, E>(fn: () => Promise<V>): Promise<Result<V, E>> => {
+export const tryCatchAsync = async <V, E>(
+    fn: () => Promise<V>,
+): Promise<Result<V, E>> => {
     try {
         const value = await fn();
         return ok(value);

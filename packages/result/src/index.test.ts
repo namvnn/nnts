@@ -141,7 +141,9 @@ describe("tryCatch", () => {
 
 describe("tryCatchAsync", () => {
     it("returns Ok when promise resolves", async () => {
-        const result = await tryCatchAsync<number, Error>(async () => Promise.resolve(123));
+        const result = await tryCatchAsync<number, Error>(async () =>
+            Promise.resolve(123),
+        );
 
         expectTypeOf(result).toEqualTypeOf<Result<number, Error>>();
         expect(isOk(result)).toBe(true);
