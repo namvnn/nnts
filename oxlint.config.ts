@@ -9,6 +9,7 @@ export default defineConfig({
         "oxc",
         "promise",
         "react",
+        "react-perf",
         "typescript",
         "unicorn",
         "vitest",
