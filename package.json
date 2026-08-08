@@ -12,6 +12,7 @@
     "scripts": {
         "build": "tsdown --minify",
         "build:pkg": "tsdown --minify --filter",
+        "check": "pnpm fmt:check && pnpm lint && pnpm typecheck && pnpm test --run",
         "dev": "tsdown --watch",
         "dev:pkg": "tsdown --watch --filter",
         "fmt": "oxfmt",
@@ -24,22 +25,23 @@
         "test:ui": "vitest --ui",
         "typecheck": "tsc --build",
         "typecheck:clean": "tsc --build --clean",
+        "typecheck:debug": "tsc --build --diagnostics",
         "typecheck:watch": "tsc --build --watch"
     },
     "devDependencies": {
-        "@arethetypeswrong/core": "0.18.4",
-        "@types/node": "26.1.0",
-        "@vitest/coverage-v8": "4.1.9",
-        "@vitest/ui": "4.1.9",
+        "@arethetypeswrong/core": "0.18.5",
+        "@types/node": "26.1.2",
+        "@vitest/coverage-v8": "4.1.10",
+        "@vitest/ui": "4.1.10",
         "husky": "9.1.7",
-        "lint-staged": "17.0.8",
-        "oxfmt": "0.57.0",
-        "oxlint": "1.72.0",
-        "oxlint-tsgolint": "0.24.0",
-        "publint": "0.3.21",
-        "tsdown": "0.22.3",
-        "typescript": "6.0.3",
-        "vitest": "4.1.9"
+        "lint-staged": "17.3.0",
+        "oxfmt": "0.62.0",
+        "oxlint": "1.77.0",
+        "oxlint-tsgolint": "7.0.2001",
+        "publint": "0.3.23",
+        "tsdown": "0.22.14",
+        "typescript": "7.0.2",
+        "vitest": "4.1.10"
     },
     "packageManager": "pnpm@11.20.0"
 }
