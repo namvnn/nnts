@@ -1,9 +1,11 @@
-# `nnts` ![Static Badge](https://img.shields.io/badge/IN_PROGRESS-yellow?style=flat-square)
+# TypeScript Monorepo Template
 
-A collection of TypeScript libraries and developer tools.
-
-> This project is currently under active development and is not yet considered
-> stable.
+- Package Manager: [pnpm](https://pnpm.io)
+- Bundler: [tsdown](https://tsdown.dev)
+- Testing: [vitest](https://vitest.dev)
+- Linter: [oxlint](https://oxc.rs/docs/guide/usage/linter)
+- Formatter: [oxfmt](https://oxc.rs/docs/guide/usage/formatter)
+- Git Hooks: [husky](https://typicode.github.io/husky/) + [lint-staged](https://github.com/lint-staged/lint-staged)
 
 ## License
 
